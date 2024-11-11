@@ -1,0 +1,83 @@
+/* Main Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Gallery Section */
+#gallery {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Main Image */
+figure {
+  position: relative;
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Image Thumbnails */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+ul li {
+  flex: 0 1 auto;
+}
+
+ul img {
+  width: 240px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: transform 0.3s, border-color 0.3s, filter 0.3s;
+}
+
+ul img:hover {
+  transform: scale(1.05);
+  border-color: #007acc;
+}
+
+ul img.active {
+  border-color: #007acc;
+  filter: none;
+}
+
+/* Grayscale effect on the inactive thumbnails */
+ul img:not(.active) {
+  filter: grayscale(100%);
+}
